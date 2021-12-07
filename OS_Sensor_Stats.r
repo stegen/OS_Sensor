@@ -27,3 +27,4 @@ t.test(x = precis.dat$Mean_Deviation[grep(pattern = "Atlas",x = precis.dat$Senso
 #  sample estimates:
 #  mean of x mean of y 
 #  2.85      9.12 
+
