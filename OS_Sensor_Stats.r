@@ -14,6 +14,12 @@ t.test(x = accur.dat$Mean_Error[grep(pattern = "Atlas",x = accur.dat$Sensor_Grou
 #  mean of x mean of y 
 # 3.075000  9.233333 
 
+#nonparametric test
+wilcox.test(x = accur.dat$Mean_Error[grep(pattern = "Atlas",x = accur.dat$Sensor_Group)],y = accur.dat$Mean_Error[grep(pattern = "Other",x = accur.dat$Sensor_Group)])
+
+#nonparameteric results for accuracy
+#W = 12, p-value = 0.02065
+
 # for calculating overall OS sensor prevision (Atlas v. "Other")
 precis.dat = read.csv(file = "Mean_Deviation.csv",stringsAsFactors = F)
 str(precis.dat)
@@ -28,4 +34,7 @@ t.test(x = precis.dat$Mean_Deviation[grep(pattern = "Atlas",x = precis.dat$Senso
 #  mean of x mean of y 
 #  2.85      9.12 
 
+wilcox.test(x = precis.dat$Mean_Deviation[grep(pattern = "Atlas",x = precis.dat$Sensor_Group)],y = precis.dat$Mean_Deviation[grep(pattern = "Other",x = precis.dat$Sensor_Group)])
 
+#nonparametric results - precision 
+#W = 15, p-value = 0.0484
