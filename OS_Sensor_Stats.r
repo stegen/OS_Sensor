@@ -17,7 +17,7 @@ t.test(x = accur.dat$Mean_Error[grep(pattern = "Atlas",x = accur.dat$Sensor_Grou
 #nonparametric test
 wilcox.test(x = accur.dat$Mean_Error[grep(pattern = "Atlas",x = accur.dat$Sensor_Group)],y = accur.dat$Mean_Error[grep(pattern = "Other",x = accur.dat$Sensor_Group)])
 
-#nonparameteric results for accuracy
+#nonparametric results for accuracy
 #W = 12, p-value = 0.02065
 
 # for calculating overall OS sensor prevision (Atlas v. "Other")
